@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Options() {
+export default function Options({ setToLowerCase }) {
   return (
     <div className="options">
       <button>lower case</button>
