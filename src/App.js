@@ -13,13 +13,20 @@ function App() {
   console.log(text);
 
   const setToLowerCase = () => {
-    setText(text.toLowerCase);
+    setText(text.toLowerCase());
+  };
+
+  const setToUpperCase = () => {
+    setText(text.toUpperCase());
   };
 
   return (
     <div className="App">
       <Title />
-      <Options setToLowerCase={setToLowerCase} />
+      <Options
+        setToLowerCase={setToLowerCase}
+        setToUpperCase={setToUpperCase}
+      />
       <Input text={text} setText={setText} />
     </div>
   );
