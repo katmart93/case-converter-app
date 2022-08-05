@@ -20,12 +20,23 @@ function App() {
     setText(text.toUpperCase());
   };
 
+  const setToCapitalizedCase = () => {
+    setText(
+      text
+        .toLowerCase()
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
+    );
+  };
+
   return (
     <div className="App">
       <Title />
       <Options
         setToLowerCase={setToLowerCase}
         setToUpperCase={setToUpperCase}
+        setToCapitalizedCase={setToCapitalizedCase}
       />
       <Input text={text} setText={setText} />
     </div>
