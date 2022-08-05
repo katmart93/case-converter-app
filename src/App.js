@@ -30,12 +30,15 @@ function App() {
     );
   };
 
-  /*
   const setAlternatingCase = () => {
-    setText(text.toLowerCase().split(""));
-    // console.log(text);
+    setText(
+      text
+        .toLowerCase()
+        .split("")
+        .map((char, idx) => (idx % 2 === 0 ? char : char.toUpperCase()))
+        .join("")
+    );
   };
-*/
 
   const setSentenceCase = () => {
     setText(
@@ -56,6 +59,7 @@ function App() {
         setToUpperCase={setToUpperCase}
         setToCapitalizedCase={setToCapitalizedCase}
         setSentenceCase={setSentenceCase}
+        setAlternatingCase={setAlternatingCase}
       />
       <Input text={text} setText={setText} />
     </div>
