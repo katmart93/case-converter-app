@@ -74,18 +74,17 @@ function App() {
     let textArr = text
       .toLowerCase()
       .split(".")
+      .map((sentence) => sentence.trim())
       .map((sentence) => sentence.charAt(0).toUpperCase() + sentence.slice(1))
       .toString()
       .split(" ")
-      .map((word, idx, arr) => {
-        exceptions.map((except) => {
-          if (word == except) {
-            word.replace(word, word.toUpperCase());
+      .map((word) => {
+        for (const exception of exceptions) {
+          if (word === exception) {
+            return word.toLowerCase();
           }
-          console.log("except", except);
-        });
-        console.log("word", word);
-        return word;
+        }
+        return word.charAt(0).toUpperCase() + word.slice(1);
       });
 
     // textArr[0] = textArr[0].charAt(0).toUpperCase() + textArr[0].slice(1);
