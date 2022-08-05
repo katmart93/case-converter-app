@@ -9,6 +9,7 @@ import { useState } from "react";
 
 function App() {
   const [text, setText] = useState("");
+  const [textCopied, setTextCopied] = useState(false);
 
   console.log(text);
 
@@ -60,6 +61,9 @@ function App() {
         setToCapitalizedCase={setToCapitalizedCase}
         setSentenceCase={setSentenceCase}
         setAlternatingCase={setAlternatingCase}
+        text={text}
+        textCopied={textCopied}
+        setTextCopied={setTextCopied}
       />
       <Input text={text} setText={setText} />
     </div>
