@@ -4,6 +4,7 @@ export default function Options({
   setToLowerCase,
   setToUpperCase,
   setToCapitalizedCase,
+  setSentenceCase,
 }) {
   return (
     <div className="options">
@@ -11,7 +12,7 @@ export default function Options({
       <button onClick={setToUpperCase}>UPPER CASE</button>
       <button onClick={setToCapitalizedCase}>Capitalized Case</button>
       <button>aLtErNaTiNg cAsE</button>
-      <button>Sentence case</button>
+      <button onClick={setSentenceCase}>Sentence case</button>
       <button>Title Case</button>
       <button>Copy to clipboard</button>
     </div>
