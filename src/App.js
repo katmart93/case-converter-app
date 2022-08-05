@@ -76,6 +76,7 @@ function App() {
       .split(".")
       .map((sentence) => sentence.trim())
       .map((sentence) => sentence.charAt(0).toUpperCase() + sentence.slice(1))
+      .join(". ")
       .toString()
       .split(" ")
       .map((word) => {
@@ -85,10 +86,11 @@ function App() {
           }
         }
         return word.charAt(0).toUpperCase() + word.slice(1);
-      });
+      })
+      .join(" ");
 
-    // textArr[0] = textArr[0].charAt(0).toUpperCase() + textArr[0].slice(1);
     console.log("from the function:", textArr);
+    setText(textArr);
   };
 
   return (
