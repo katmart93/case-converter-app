@@ -52,6 +52,46 @@ function App() {
     );
   };
 
+  const titleCase = () => {
+    const exceptions = [
+      "and",
+      "for",
+      "of",
+      "but",
+      "neither",
+      "nor",
+      "either",
+      "or",
+      "yet",
+      "so",
+      "on",
+      "in",
+      "the",
+      "a",
+      "an",
+    ];
+
+    let textArr = text
+      .toLowerCase()
+      .split(".")
+      .map((sentence) => sentence.charAt(0).toUpperCase() + sentence.slice(1))
+      .toString()
+      .split(" ")
+      .map((word, idx, arr) => {
+        exceptions.map((except) => {
+          if (word == except) {
+            word.replace(word, word.toUpperCase());
+          }
+          console.log("except", except);
+        });
+        console.log("word", word);
+        return word;
+      });
+
+    // textArr[0] = textArr[0].charAt(0).toUpperCase() + textArr[0].slice(1);
+    console.log("from the function:", textArr);
+  };
+
   return (
     <div className="App">
       <Title />
@@ -61,6 +101,7 @@ function App() {
         setToCapitalizedCase={setToCapitalizedCase}
         setSentenceCase={setSentenceCase}
         setAlternatingCase={setAlternatingCase}
+        titleCase={titleCase}
         text={text}
         textCopied={textCopied}
         setTextCopied={setTextCopied}

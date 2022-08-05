@@ -6,6 +6,7 @@ export default function Options({
   setToCapitalizedCase,
   setSentenceCase,
   setAlternatingCase,
+  titleCase,
   text,
   textCopied,
   setTextCopied,
@@ -21,7 +22,7 @@ export default function Options({
       <button onClick={setToCapitalizedCase}>Capitalized Case</button>
       <button onClick={setAlternatingCase}>aLtErNaTiNg cAsE</button>
       <button onClick={setSentenceCase}>Sentence case</button>
-      <button>Title Case</button>
+      <button onClick={titleCase}>Title Case</button>
       <CopyToClipboard text={text} onCopy={() => setTextCopied(true)}>
         <button>{textCopied ? "Copied" : "Copy to clipboard"}</button>
       </CopyToClipboard>
