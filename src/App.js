@@ -10,11 +10,10 @@ import { useState } from "react";
 function App() {
   const [text, setText] = useState("");
   const [fontSize, setFontSize] = useState("16px");
+  const [fontStyle, setFontStyle] = useState("");
   const [textCopied, setTextCopied] = useState(false);
 
   console.log(text);
-  console.log("font size:", fontSize);
-
   const lowerCase = () => {
     setText(text.toLowerCase());
   };
@@ -124,8 +123,14 @@ function App() {
         textCopied={textCopied}
         setTextCopied={setTextCopied}
         setFontSize={setFontSize}
+        setFontStyle={setFontStyle}
       />
-      <Input text={text} setText={setText} fontSize={fontSize} />
+      <Input
+        text={text}
+        setText={setText}
+        fontSize={fontSize}
+        fontStyle={fontStyle}
+      />
     </div>
   );
 }
