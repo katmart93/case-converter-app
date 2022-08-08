@@ -1,11 +1,12 @@
 import CopyToClipboard from "react-copy-to-clipboard";
 
 export default function Options({
-  setToLowerCase,
-  setToUpperCase,
-  setToCapitalizedCase,
-  setSentenceCase,
-  setAlternatingCase,
+  lowerCase,
+  upperCase,
+  capitalizedCase,
+  sentenceCase,
+  alternatingCase,
+  inverseCase,
   titleCase,
   text,
   textCopied,
@@ -17,11 +18,12 @@ export default function Options({
 
   return (
     <div className="options">
-      <button onClick={setToLowerCase}>lower case</button>
-      <button onClick={setToUpperCase}>UPPER CASE</button>
-      <button onClick={setToCapitalizedCase}>Capitalized Case</button>
-      <button onClick={setAlternatingCase}>aLtErNaTiNg cAsE</button>
-      <button onClick={setSentenceCase}>Sentence case</button>
+      <button onClick={lowerCase}>lower case</button>
+      <button onClick={upperCase}>UPPER CASE</button>
+      <button onClick={capitalizedCase}>Capitalized Case</button>
+      <button onClick={alternatingCase}>aLtErNaTiNg cAsE</button>
+      <button onClick={inverseCase}>InVeRsE CaSe</button>
+      <button onClick={sentenceCase}>Sentence case</button>
       <button onClick={titleCase}>Title Case</button>
       <CopyToClipboard text={text} onCopy={() => setTextCopied(true)}>
         <button>{textCopied ? "Copied" : "Copy to clipboard"}</button>

@@ -13,15 +13,15 @@ function App() {
 
   console.log(text);
 
-  const setToLowerCase = () => {
+  const lowerCase = () => {
     setText(text.toLowerCase());
   };
 
-  const setToUpperCase = () => {
+  const upperCase = () => {
     setText(text.toUpperCase());
   };
 
-  const setToCapitalizedCase = () => {
+  const capitalizedCase = () => {
     setText(
       text
         .toLowerCase()
@@ -31,7 +31,7 @@ function App() {
     );
   };
 
-  const setAlternatingCase = () => {
+  const alternatingCase = () => {
     setText(
       text
         .toLowerCase()
@@ -41,7 +41,17 @@ function App() {
     );
   };
 
-  const setSentenceCase = () => {
+  const inverseCase = () => {
+    setText(
+      text
+        .toLowerCase()
+        .split("")
+        .map((char, idx) => (idx % 2 ? char : char.toUpperCase()))
+        .join("")
+    );
+  };
+
+  const sentenceCase = () => {
     setText(
       text
         .toLowerCase()
@@ -97,11 +107,12 @@ function App() {
     <div className="App">
       <Title />
       <Options
-        setToLowerCase={setToLowerCase}
-        setToUpperCase={setToUpperCase}
-        setToCapitalizedCase={setToCapitalizedCase}
-        setSentenceCase={setSentenceCase}
-        setAlternatingCase={setAlternatingCase}
+        lowerCase={lowerCase}
+        upperCase={upperCase}
+        capitalizedCase={capitalizedCase}
+        sentenceCase={sentenceCase}
+        alternatingCase={alternatingCase}
+        inverseCase={inverseCase}
         titleCase={titleCase}
         text={text}
         textCopied={textCopied}
