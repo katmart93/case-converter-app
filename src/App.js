@@ -9,9 +9,11 @@ import { useState } from "react";
 
 function App() {
   const [text, setText] = useState("");
+  const [fontSize, setFontSize] = useState("16px");
   const [textCopied, setTextCopied] = useState(false);
 
   console.log(text);
+  console.log("font size:", fontSize);
 
   const lowerCase = () => {
     setText(text.toLowerCase());
@@ -28,6 +30,7 @@ function App() {
         .split(" ")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ")
+        .trim()
     );
   };
 
@@ -38,6 +41,7 @@ function App() {
         .split("")
         .map((char, idx) => (idx % 2 === 0 ? char : char.toUpperCase()))
         .join("")
+        .trim()
     );
   };
 
@@ -48,6 +52,7 @@ function App() {
         .split("")
         .map((char, idx) => (idx % 2 ? char : char.toUpperCase()))
         .join("")
+        .trim()
     );
   };
 
@@ -59,6 +64,7 @@ function App() {
         .map((sentence) => sentence.trim())
         .map((sentence) => sentence.charAt(0).toUpperCase() + sentence.slice(1))
         .join(". ")
+        .trim()
     );
   };
 
@@ -97,14 +103,9 @@ function App() {
         }
         return word.charAt(0).toUpperCase() + word.slice(1);
       })
-      .join(" ");
-
-    console.log("from the function:", textArr);
+      .join(" ")
+      .trim();
     setText(textArr);
-  };
-
-  const handleClear = () => {
-    setText("");
   };
 
   return (
@@ -119,11 +120,12 @@ function App() {
         inverseCase={inverseCase}
         titleCase={titleCase}
         text={text}
+        setText={setText}
         textCopied={textCopied}
         setTextCopied={setTextCopied}
-        setText={setText}
+        setFontSize={setFontSize}
       />
-      <Input text={text} setText={setText} />
+      <Input text={text} setText={setText} fontSize={fontSize} />
     </div>
   );
 }
