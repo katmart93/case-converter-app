@@ -121,7 +121,7 @@ function App() {
         text={text}
         textCopied={textCopied}
         setTextCopied={setTextCopied}
-        handleClear={handleClear}
+        setText={setText}
       />
       <Input text={text} setText={setText} />
     </div>

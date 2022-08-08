@@ -9,9 +9,9 @@ export default function Options({
   inverseCase,
   titleCase,
   text,
+  setText,
   textCopied,
   setTextCopied,
-  handleClear,
 }) {
   setTimeout(() => {
     setTextCopied(false);
@@ -29,7 +29,7 @@ export default function Options({
       <CopyToClipboard text={text} onCopy={() => setTextCopied(true)}>
         <button>{textCopied ? "Copied" : "Copy to clipboard"}</button>
       </CopyToClipboard>
-      <button onClick={handleClear}>Clear</button>
+      <button onClick={() => setText("")}>Clear</button>
     </div>
   );
 }
