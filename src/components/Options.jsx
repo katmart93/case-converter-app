@@ -11,6 +11,7 @@ export default function Options({
   text,
   textCopied,
   setTextCopied,
+  handleClear,
 }) {
   setTimeout(() => {
     setTextCopied(false);
@@ -28,6 +29,7 @@ export default function Options({
       <CopyToClipboard text={text} onCopy={() => setTextCopied(true)}>
         <button>{textCopied ? "Copied" : "Copy to clipboard"}</button>
       </CopyToClipboard>
+      <button onClick={handleClear}>Clear</button>
     </div>
   );
 }

@@ -103,6 +103,10 @@ function App() {
     setText(textArr);
   };
 
+  const handleClear = () => {
+    setText("");
+  };
+
   return (
     <div className="App">
       <Title />
@@ -117,6 +121,7 @@ function App() {
         text={text}
         textCopied={textCopied}
         setTextCopied={setTextCopied}
+        handleClear={handleClear}
       />
       <Input text={text} setText={setText} />
     </div>
