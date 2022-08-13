@@ -1,11 +1,25 @@
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  background: #4c7d95;
-  color: #f3f3f3;
+html {
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  background-color: #4c7d95;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  color: #f3f3f3;
 }

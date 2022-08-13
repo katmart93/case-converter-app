@@ -1,3 +1,7 @@
 export default function Title() {
-  return <h1>Case Converter</h1>;
+  return (
+    <div className="title">
+      <h1>Case Converter</h1>
+    </div>
+  );
 }
