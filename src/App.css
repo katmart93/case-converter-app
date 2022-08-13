@@ -1,7 +1,24 @@
 .App {
-  background: #0a3c54;
+  background: #4e5559;
   height: 100vh;
   margin: 0 auto;
   max-width: 1400px;
   text-align: center;
+}
+h1 {
+  padding: 40px;
+}
+.options {
+  padding: 40px;
+}
+.options button {
+  background-color: #b3b7b9;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+  color: #f3f3f3;
+}
+.options button:hover {
+  cursor: pointer;
 }

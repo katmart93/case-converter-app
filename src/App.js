@@ -110,27 +110,29 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <Options
-        lowerCase={lowerCase}
-        upperCase={upperCase}
-        capitalizedCase={capitalizedCase}
-        sentenceCase={sentenceCase}
-        alternatingCase={alternatingCase}
-        inverseCase={inverseCase}
-        titleCase={titleCase}
-        text={text}
-        setText={setText}
-        textCopied={textCopied}
-        setTextCopied={setTextCopied}
-        setFontSize={setFontSize}
-        setFontStyle={setFontStyle}
-      />
-      <Input
-        text={text}
-        setText={setText}
-        fontSize={fontSize}
-        fontStyle={fontStyle}
-      />
+      <div className="wrapper">
+        <Options
+          lowerCase={lowerCase}
+          upperCase={upperCase}
+          capitalizedCase={capitalizedCase}
+          sentenceCase={sentenceCase}
+          alternatingCase={alternatingCase}
+          inverseCase={inverseCase}
+          titleCase={titleCase}
+          text={text}
+          setText={setText}
+          textCopied={textCopied}
+          setTextCopied={setTextCopied}
+          setFontSize={setFontSize}
+          setFontStyle={setFontStyle}
+        />
+        <Input
+          text={text}
+          setText={setText}
+          fontSize={fontSize}
+          fontStyle={fontStyle}
+        />
+      </div>
     </div>
   );
 }
