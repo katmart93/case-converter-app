@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // components
 import Title from "./components/Title";
 import Options from "./components/Options";
 import Input from "./components/Input";
+import Stats from "./components/Stats";
 
 //styles
 import "./App.css";
@@ -13,8 +14,13 @@ function App() {
   const [fontSize, setFontSize] = useState("16px");
   const [fontStyle, setFontStyle] = useState("");
   const [textCopied, setTextCopied] = useState(false);
+  const [charCount, setCharCount] = useState(0);
 
   console.log(text);
+  useEffect(() => {
+    setCharCount(text.length);
+  }, [text]);
+
   const lowerCase = () => {
     setText(text.toLowerCase());
   };
@@ -133,6 +139,7 @@ function App() {
           fontSize={fontSize}
           fontStyle={fontStyle}
         />
+        <Stats charCount={charCount} />
       </div>
     </div>
   );
