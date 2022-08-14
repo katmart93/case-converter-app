@@ -5,6 +5,7 @@ export default function Stats({ charCount, wordCount }) {
     <div className="stats">
       <span>Character count: {charCount}</span>
       <span>Word count: {wordCount}</span>
+      <span>Sentence count:</span>
     </div>
   );
 }

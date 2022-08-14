@@ -18,6 +18,7 @@ function App() {
   const [textCopied, setTextCopied] = useState(false);
   const [charCount, setCharCount] = useState(0);
   const [wordCount, setWordCount] = useState(0);
+  const [sentenceCount, setSentenceCount] = useState(0);
 
   useEffect(() => {
     setCharCount(text.length);
@@ -27,6 +28,21 @@ function App() {
       setWordCount(0);
     }
   }, [text]);
+
+  /*
+  useEffect(() => {
+    setCharCount(text.length);
+    if (text !== "") {
+      if (text.includes(" ")) {
+        setWordCount(text.trim().split(" ").length);
+      } else if (text.includes("\n")) {
+        setWordCount(text.trim().split("\n").length);
+      } else {
+        setWordCount(0);
+      }
+    }
+  }, [text]);
+ */
 
   const lowerCase = () => {
     setText(text.toLowerCase());
