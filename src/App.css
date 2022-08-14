@@ -62,7 +62,13 @@ h1 {
   outline: none;
   padding: 4px;
 }
-
+.stats {
+  text-align: left;
+  margin-top: 10px;
+}
+.stats span {
+  margin-right: 30px;
+}
 .input textarea:focus,
 .options button:focus,
 .font-size-selector select:focus,
