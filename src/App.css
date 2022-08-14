@@ -13,12 +13,24 @@ h1 {
   max-width: 960px;
   margin: 0 auto;
 }
+.selectors-wrapper {
+  display: flex;
+}
+.font-style-selector {
+  margin-left: 20px;
+}
+.font-size-selector label,
+.font-style-selector label {
+  margin-right: 10px;
+}
 .font-size-selector select,
 .font-style-selector select {
   background-color: #b3b7b9;
+  border: 1px solid #b3b7b9;
   border-radius: 4px;
   color: #32383b;
   width: 130px;
+  outline: none;
   padding: 3px;
 }
 .options {
@@ -34,18 +46,16 @@ h1 {
   box-shadow: 5px 5px 15px 5px #32383b;
   color: #f3f3f3;
   padding: 10px;
+  outline: none;
 }
 .options button:hover {
   cursor: pointer;
-}
-.options button:focus {
-  border: 1px solid #32383b;
 }
 .input textarea {
   width: 948px;
   height: 300px;
   background-color: #b3b7b9;
-  border: 2px solid #b3b7b9;
+  border: 1px solid #b3b7b9;
   border-radius: 4px;
   box-shadow: 5px 5px 15px 5px #32383b;
   color: #32383b;
@@ -53,6 +63,9 @@ h1 {
   padding: 4px;
 }
 
-.input textarea:focus {
-  border: 2px solid #32383b;
+.input textarea:focus,
+.options button:focus,
+.font-size-selector select:focus,
+.font-style-selector select:focus {
+  border: 1px solid #32383b;
 }
