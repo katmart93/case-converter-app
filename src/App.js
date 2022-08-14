@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import Options from "./components/Options";
 import Input from "./components/Input";
 import Stats from "./components/Stats";
+import Text from "./Text";
 
 //styles
 import "./App.css";
@@ -125,6 +126,7 @@ function App() {
   return (
     <div className="App">
       <Title />
+      <Text />
       <div className="wrapper">
         <Options
           lowerCase={lowerCase}
