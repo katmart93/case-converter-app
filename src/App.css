@@ -13,6 +13,10 @@ h1 {
   max-width: 960px;
   margin: 0 auto;
 }
+.font-size-selector select {
+  background-color: #b3b7b9;
+  border-radius: 4px;
+}
 .options {
   display: flex;
   justify-content: space-between;
@@ -31,12 +35,13 @@ h1 {
 }
 .input textarea {
   height: 300px;
-  width: 954px;
+  width: 948px;
   background-color: #b3b7b9;
   border: 2px solid #848a8d;
   border-radius: 4px;
   box-shadow: 5px 5px 15px 5px #32383b;
   outline: none;
+  padding: 4px;
 }
 
 .input textarea:focus {
