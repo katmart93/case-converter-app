@@ -15,10 +15,16 @@ function App() {
   const [fontStyle, setFontStyle] = useState("");
   const [textCopied, setTextCopied] = useState(false);
   const [charCount, setCharCount] = useState(0);
+  const [wordCount, setWordCount] = useState(0);
 
   console.log(text);
   useEffect(() => {
     setCharCount(text.length);
+    if (text !== "") {
+      setWordCount(text.trim().split(" ").length);
+    } else {
+      setWordCount(0);
+    }
   }, [text]);
 
   const lowerCase = () => {
@@ -91,6 +97,8 @@ function App() {
       "the",
       "a",
       "an",
+      "are",
+      "am",
     ];
 
     let textArr = text
@@ -139,7 +147,7 @@ function App() {
           fontSize={fontSize}
           fontStyle={fontStyle}
         />
-        <Stats charCount={charCount} />
+        <Stats charCount={charCount} wordCount={wordCount} />
       </div>
     </div>
   );
