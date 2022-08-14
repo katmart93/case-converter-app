@@ -72,7 +72,7 @@ h1 {
 }
 .stats {
   text-align: left;
-  margin-top: 10px;
+  margin: 15px 0;
 }
 .stats span {
   margin-right: 30px;
