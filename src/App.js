@@ -20,16 +20,16 @@ function App() {
   const [wordCount, setWordCount] = useState(0);
   const [sentenceCount, setSentenceCount] = useState(0);
 
-  useEffect(() => {
-    setCharCount(text.length);
-    if (text !== "") {
-      setWordCount(text.trim().split(" ").length);
-    } else {
-      setWordCount(0);
-    }
-  }, [text]);
+  // console.log(wordCount);
+  // useEffect(() => {
+  //   setCharCount(text.length);
+  //   if (text !== "") {
+  //     setWordCount(text.trim().split(" ").length);
+  //   } else {
+  //     setWordCount(0);
+  //   }
+  // }, [text]);
 
-  /*
   useEffect(() => {
     setCharCount(text.length);
     if (text !== "") {
@@ -42,7 +42,6 @@ function App() {
       }
     }
   }, [text]);
- */
 
   const lowerCase = () => {
     setText(text.toLowerCase());
