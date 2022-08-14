@@ -1,17 +1,25 @@
 .App {
   background: #4e5559;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   max-width: 1400px;
   text-align: center;
 }
 h1 {
-  padding: 40px;
+  padding-top: 25px;
 }
-
+.title {
+  min-height: 10vh;
+}
 .wrapper {
   max-width: 960px;
+  min-height: 80vh;
   margin: 0 auto;
+}
+.text {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 40px;
 }
 .selectors-wrapper {
   display: flex;
@@ -69,10 +77,9 @@ h1 {
 .stats span {
   margin-right: 30px;
 }
-.text {
-  font-size: 20px;
-  text-align: left;
-  margin-bottom: 40px;
+.footer {
+  min-height: 10vh;
+  box-shadow: 0px -5px 10px -5px #32383b;
 }
 .input textarea:focus,
 .options button:focus,

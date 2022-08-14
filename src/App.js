@@ -6,6 +6,7 @@ import Options from "./components/Options";
 import Input from "./components/Input";
 import Stats from "./components/Stats";
 import Text from "./Text";
+import Footer from "./components/Footer";
 
 //styles
 import "./App.css";
@@ -151,6 +152,7 @@ function App() {
         />
         <Stats charCount={charCount} wordCount={wordCount} />
       </div>
+      <Footer />
     </div>
   );
 }
