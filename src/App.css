@@ -13,18 +13,23 @@ h1 {
   max-width: 960px;
   margin: 0 auto;
 }
-.font-size-selector select {
+.font-size-selector select,
+.font-style-selector select {
   background-color: #b3b7b9;
   border-radius: 4px;
+  color: #32383b;
+  width: 130px;
+  padding: 3px;
 }
 .options {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
   padding: 10px 0;
 }
 .options button {
   background-color: #848a8d;
-  border: none;
+  border: 1px solid #848a8d;
   border-radius: 4px;
   box-shadow: 5px 5px 15px 5px #32383b;
   color: #f3f3f3;
@@ -33,13 +38,17 @@ h1 {
 .options button:hover {
   cursor: pointer;
 }
+.options button:focus {
+  border: 1px solid #32383b;
+}
 .input textarea {
-  height: 300px;
   width: 948px;
+  height: 300px;
   background-color: #b3b7b9;
-  border: 2px solid #848a8d;
+  border: 2px solid #b3b7b9;
   border-radius: 4px;
   box-shadow: 5px 5px 15px 5px #32383b;
+  color: #32383b;
   outline: none;
   padding: 4px;
 }
