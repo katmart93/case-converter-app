@@ -21,19 +21,6 @@ export default function Options({
 
   return (
     <>
-      <div className="options">
-        <button onClick={lowerCase}>lower case</button>
-        <button onClick={upperCase}>UPPER CASE</button>
-        <button onClick={capitalizedCase}>Capitalized Case</button>
-        <button onClick={alternatingCase}>aLtErNaTiNg cAsE</button>
-        <button onClick={inverseCase}>InVeRsE CaSe</button>
-        <button onClick={sentenceCase}>Sentence case</button>
-        <button onClick={titleCase}>Title Case</button>
-        <CopyToClipboard text={text} onCopy={() => setTextCopied(true)}>
-          <button>{textCopied ? "Copied" : "Copy to clipboard"}</button>
-        </CopyToClipboard>
-        <button onClick={() => setText("")}>Clear</button>
-      </div>
       <div className="font-size-selector">
         <label htmlFor="font-size">Font size:</label>
         <select name="font-size" onChange={(e) => setFontSize(e.target.value)}>
@@ -70,6 +57,19 @@ export default function Options({
           <option value="Playfair Display">Playfair Display</option>
           <option value="Times New Roman">Times New Roman</option>
         </select>
+      </div>
+      <div className="options">
+        <button onClick={lowerCase}>lower case</button>
+        <button onClick={upperCase}>UPPER CASE</button>
+        <button onClick={capitalizedCase}>Capitalized Case</button>
+        <button onClick={alternatingCase}>aLtErNaTiNg cAsE</button>
+        <button onClick={inverseCase}>InVeRsE CaSe</button>
+        <button onClick={sentenceCase}>Sentence case</button>
+        <button onClick={titleCase}>Title Case</button>
+        <CopyToClipboard text={text} onCopy={() => setTextCopied(true)}>
+          <button>{textCopied ? "Copied" : "Copy to clipboard"}</button>
+        </CopyToClipboard>
+        <button onClick={() => setText("")}>Clear</button>
       </div>
     </>
   );
