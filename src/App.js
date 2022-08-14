@@ -17,7 +17,6 @@ function App() {
   const [charCount, setCharCount] = useState(0);
   const [wordCount, setWordCount] = useState(0);
 
-  console.log(text);
   useEffect(() => {
     setCharCount(text.length);
     if (text !== "") {
@@ -99,6 +98,7 @@ function App() {
       "an",
       "are",
       "am",
+      "is",
     ];
 
     let textArr = text
