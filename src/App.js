@@ -126,8 +126,8 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <Text />
       <div className="wrapper">
+        <Text />
         <Options
           lowerCase={lowerCase}
           upperCase={upperCase}

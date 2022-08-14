@@ -69,6 +69,11 @@ h1 {
 .stats span {
   margin-right: 30px;
 }
+.text {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 40px;
+}
 .input textarea:focus,
 .options button:focus,
 .font-size-selector select:focus,
