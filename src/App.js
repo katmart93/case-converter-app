@@ -21,6 +21,7 @@ function App() {
   const [sentenceCount, setSentenceCount] = useState(0);
 
   console.log(sentenceCount);
+  // stats counters
   useEffect(() => {
     setCharCount(text.length);
     if (text !== "") {
