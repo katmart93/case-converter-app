@@ -20,26 +20,13 @@ function App() {
   const [wordCount, setWordCount] = useState(0);
   const [sentenceCount, setSentenceCount] = useState(0);
 
-  // console.log(wordCount);
-  // useEffect(() => {
-  //   setCharCount(text.length);
-  //   if (text !== "") {
-  //     setWordCount(text.trim().split(" ").length);
-  //   } else {
-  //     setWordCount(0);
-  //   }
-  // }, [text]);
-
+  console.log(wordCount);
   useEffect(() => {
     setCharCount(text.length);
     if (text !== "") {
-      if (text.includes(" ")) {
-        setWordCount(text.trim().split(" ").length);
-      } else if (text.includes("\n")) {
-        setWordCount(text.trim().split("\n").length);
-      } else {
-        setWordCount(0);
-      }
+      setWordCount(text.trim().split(/\s+/g).length); // regex, removes multiple white spaces
+    } else {
+      setWordCount(0);
     }
   }, [text]);
 
