@@ -20,16 +20,18 @@ function App() {
   const [wordCount, setWordCount] = useState(0);
   const [sentenceCount, setSentenceCount] = useState(0);
 
-  console.log(wordCount);
+  console.log(sentenceCount);
   useEffect(() => {
     setCharCount(text.length);
     if (text !== "") {
       setWordCount(text.trim().split(/\s+/g).length); // regex, removes multiple white spaces
-    } else {
-      setWordCount(0);
-    }
+    } else setWordCount(0);
+    if (text !== "") {
+      setSentenceCount(text.split(".").slice(0, -1).length);
+    } else setSentenceCount(0);
   }, [text]);
 
+  // functions converting case
   const lowerCase = () => {
     setText(text.toLowerCase());
   };
@@ -103,6 +105,8 @@ function App() {
       "are",
       "am",
       "is",
+      "at",
+      "to",
     ];
 
     let textArr = text
@@ -152,7 +156,11 @@ function App() {
           fontSize={fontSize}
           fontStyle={fontStyle}
         />
-        <Stats charCount={charCount} wordCount={wordCount} />
+        <Stats
+          charCount={charCount}
+          wordCount={wordCount}
+          sentenceCount={sentenceCount}
+        />
       </div>
       <Footer />
     </div>
