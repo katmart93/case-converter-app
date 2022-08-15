@@ -60,6 +60,7 @@ export default function Options({
             <option value="Open Sans">Open Sans</option>
             <option value="Play">Play</option>
             <option value="Playfair Display">Playfair Display</option>
+            <option value="Roboto">Roboto</option>
             <option value="Times New Roman">Times New Roman</option>
           </select>
         </div>
