@@ -49,7 +49,6 @@ export default function Options({
             </option>
             <option value="Anton">Anton</option>
             <option value="Arial">Arial</option>
-            <option value="Bebas Neue">Bebas Neue</option>
             <option value="BhuTuka Expanded One">BhuTuka Expanded One</option>
             <option value="Caveat">Caveat</option>
             <option value="Cinzel">Cinzel</option>

@@ -97,3 +97,6 @@ h1 {
 .font-style-selector select:focus {
   border: 1px solid #32383b;
 }
+.options button:focus {
+  background-color: #676e72;
+}
