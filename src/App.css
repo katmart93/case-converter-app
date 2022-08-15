@@ -67,6 +67,7 @@ h1 {
   border-radius: 4px;
   box-shadow: 5px 5px 15px 5px #32383b;
   color: #32383b;
+  font-family: "Roboto", sans-serif;
   outline: none;
   padding: 4px;
 }
@@ -89,6 +90,9 @@ h1 {
   width: 2em;
   height: 2em;
   margin: 15px 0;
+}
+.github-icon:hover {
+  color: #b3b7b9;
 }
 
 .input textarea:focus,
