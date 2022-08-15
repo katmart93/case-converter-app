@@ -81,6 +81,16 @@ h1 {
   min-height: 10vh;
   box-shadow: 0px -5px 10px -5px #32383b;
 }
+.footer a {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+.github-icon {
+  width: 2em;
+  height: 2em;
+  margin: 15px 0;
+}
+
 .input textarea:focus,
 .options button:focus,
 .font-size-selector select:focus,
