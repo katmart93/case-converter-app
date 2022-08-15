@@ -6,10 +6,10 @@ export default function Footer() {
     <div className="footer">
       <a href="https://github.com/katmart93" target="_blank">
         <FontAwesomeIcon icon={faGithub} className="github-icon" />
-        <div className="copyright">
-          <small>&copy; katmart93</small>
-        </div>
       </a>
+      <div className="copyright">
+        <small>&copy; katmart93</small>
+      </div>
     </div>
   );
 }
